@@ -1,19 +1,19 @@
 <!--
 Connection tag exposes three arguments, host, port, and keyfile,
-and one event handler, onchange.
+and one event handler, onupdate.
 -->
 <connection>
   <form class="form-horizontal">
     <div class="form-group">
       <label class="control-label col-xs-3" for="host">Host:</label>
       <div class="col-xs-9">
-        <input class="form-control" id="host" ref="host" type="text" value="{opts.host}" oninput="{handleUpdate}"/>
+        <input class="form-control" id="host" ref="host" type="text" value="{opts.host}" onblur="{handleUpdate}"/>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-xs-3" for="port">Port:</label>
       <div class="col-xs-9">
-        <input class="form-control" id="port" ref="port" type="text" value="{opts.port}" oninput="{handleUpdate}"/>
+        <input class="form-control" id="port" ref="port" type="text" value="{opts.port}" onblur="{handleUpdate}"/>
         <p class="help-block">If omitted, default port number 22 will be used.</p>
       </div>
     </div>
@@ -28,7 +28,7 @@ and one event handler, onchange.
   <script>
     handleUpdate(e){
       e.preventDefault();
-      opts.onchange({
+      opts.onupdate({
         host: this.refs.host.value,
         port: this.refs.port.value,
         keyfile: this.refs.keyfile.value
