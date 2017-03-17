@@ -18,8 +18,8 @@ null.
     }
   </style>
   <div class="row">
-    <input class="col-xs-3" type="text" ref="title"></input>
-    <input class="col-xs-7" type="text" ref="url"></input>
+    <input class="col-xs-3" type="text" ref="title" placeholder="Name"></input>
+    <input class="col-xs-7" type="text" ref="url" placeholder="URL"></input>
     <div class="pull-right">
       <button class="btn btn-link" onclick="{ok}">
         <span class="glyphicon glyphicon-ok" area-hidden="true"/>
@@ -108,8 +108,8 @@ onstart sends a site object; onupdate sents a updated list of site objects.
 
       <!-- Edit information of a site -->
       <div class="row edit {hidden: key !== editing} {show: key === editing}">
-        <input class="col-xs-3" type="text" value="{site.title}" oninput="{curTitle}"></input>
-        <input class="col-xs-7" type="text" value="{site.url}" oninput="{curUrl}"></input>
+        <input class="col-xs-3" type="text" value="{site.title}" oninput="{curTitle}" placeholder="Name"></input>
+        <input class="col-xs-7" type="text" value="{site.url}" oninput="{curUrl}" placeholder="URL"></input>
         <div class="pull-right">
           <button class="btn btn-link" onclick="{editOk}">
             <span class="glyphicon glyphicon-ok" area-hidden="true"/>
