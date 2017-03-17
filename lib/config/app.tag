@@ -24,7 +24,7 @@
       this.port = arg.port;
       this.keyfile = arg.keyfile;
       this.update();
-      ipcRenderer.send("update-connection", {
+      ipcRenderer.sendSync("update-connection", {
         host: this.host,
         port: this.port,
         keyfile: this.keyfile
@@ -33,17 +33,13 @@
 
     // Handle onstart event. The given arg object has a title and a url.
     handleStart(arg){
-      ipcRenderer.send("start", arg.url);
+      ipcRenderer.sendSync("start", arg.url);
     }
 
     handleUpdateList(newList){
       this.sitelist = newList;
       this.update();
-      ipcRenderer.send("update-sitelist", {
-        host: this.host,
-        port: this.port,
-        keyfile: this.keyfile
-      });
+      ipcRenderer.sendSync("update-sitelist", this.sitelist);
     }
   </script>
 </app>
