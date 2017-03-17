@@ -1,4 +1,14 @@
 <!--
+sites.tag
+
+Copyright (c) 2017 Junpei Kawamoto
+
+This software is released under the MIT License.
+
+http://opensource.org/licenses/mit-license.php
+-->
+
+<!--
 New site tag exposes one event handler, onend, which takes two arguments,
 succeed and an object consisting of a title and a url.
 If the addition of a new site is canceled, succeed will be false and the object

@@ -1,4 +1,14 @@
 <!--
+connection.tag
+
+Copyright (c) 2017 Junpei Kawamoto
+
+This software is released under the MIT License.
+
+http://opensource.org/licenses/mit-license.php
+-->
+
+<!--
 Connection tag exposes three arguments, host, port, and keyfile,
 and one event handler, onupdate.
 -->

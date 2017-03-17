@@ -1,3 +1,12 @@
+<!--
+app.tag
+
+Copyright (c) 2017 Junpei Kawamoto
+
+This software is released under the MIT License.
+
+http://opensource.org/licenses/mit-license.php
+-->
 <app>
   <!-- TODO: Add an information bar to show errors and warnings here. -->
   <section class="container">
